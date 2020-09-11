@@ -23,7 +23,7 @@ This is done on the command line or terminal.
 *  `cd` into the directory of where you installed this project.
 *	Run  `composer install`
 *	Run  `cp .env.example .env` to create your .env file
-*	In the .env file fill in the ``` DB_HOST, DB_PORT```, ```- DB_DATABASE```, ```- DB_USERNAME```, and ```- DB_PASSWORD``` options to match the credentials of the database you just created.
+*	In the .env file fill in the ```javascript DB_HOST, DB_PORT```, ```javascript DB_DATABASE```, ```javascript DB_USERNAME```, and ```javascript DB_PASSWORD``` options to match the credentials of the database you just created.
 *	Run `php artisan migrate`    to migrate / create the database.
 *   [Optional] run     `php artisan db:seed`  if your repo contains a seeder file, to fill your database with dummy data
 *   Run `php artisan serve`, the app should run on port 8000
