@@ -19,11 +19,11 @@ about the project here [Fumana](https://github.com/BuildForSDGCohort2/Team-258-g
 This is done on the command line or terminal. 
 [Optional] For the full installation go here for [laravel](https://laravel.com/docs/7.x/installation)
 
-*   Clone the app on your computer using https://github.com/BuildForSDGCohort2/Team-258-group-a-backend-php)
+*   Clone the app on your computer 
 *  `cd` into the directory of where you installed this project.
 *	Run  `composer install`
 *	Run  `cp .env.example .env` to create your .env file
-*	In the .env file fill in the - ![#f03c15](https://imgrp2.xiaolee.net/i/aHR0cHM6Ly9wbGFjZWhvbGQuaXQvMTUvZjAzYzE1LzAwMDAwMD90ZXh0PSs=.jpg) `DB_HOST `, ```javascript DB_PORT ```, ```javascript DB_DATABASE ```, ```javascript DB_USERNAME ```, and ```javascript DB_PASSWORD ``` options need to match the credentials of the database you just created.
+*	In the .env file fill in the - ![#DB_HOST](https://imgrp2.xiaolee.net/i/aHR0cHM6Ly9wbGFjZWhvbGQuaXQvMTUvZjAzYzE1LzAwMDAwMD90ZXh0PSs=.jpg) `#DB_HOST `, `javascript DB_PORT `, `javascript DB_DATABASE `, `javascript DB_USERNAME `, and `javascript DB_PASSWORD ` options need to match the credentials of the database you just created.
 *	Run `php artisan migrate`    to migrate / create the database.
 *   [Optional] run     `php artisan db:seed`  if your repo contains a seeder file, to fill your database with dummy data
 *   Run `php artisan serve`, the app should run on port 8000
