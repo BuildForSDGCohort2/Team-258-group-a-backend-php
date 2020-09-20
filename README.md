@@ -24,7 +24,8 @@ This is done on the command line or terminal.
 *	Run  `composer install`
 *	Run  `cp .env.example .env` if you have a .env file duplicate it and change the name to .env
 *	In the .env file remove DB_HOST , DB_PORT , DB_DATABASE , DB_USERNAME , and DB_PASSWORD, only leave DB_CONNECTION=, change DB_CONNECTION=mysql to DB_CONNECTION=sqlite.
-*   In your database folder, create a file – database.sqlite (this is database file with extension .sqlite):
+*	Whilst in the .env file add, `DB_DATABASE=database\database.sqlite` and `DB_FOREIGN_KEYS=true`  each on a new line 
+*   In the database folder, create a file – database.sqlite (this is database file with extension .sqlite).
 *	Run `php artisan migrate`    to migrate / create the database.
 *   [Optional] run     `php artisan db:seed`  if your repo contains a seeder file, to fill your database with dummy data
 *   Run `php artisan serve`, the app should run on port 8000
