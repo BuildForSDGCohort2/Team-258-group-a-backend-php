@@ -5,13 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ContactInfo extends Model
+class Address extends Model
 {
     use HasFactory;
 	
 	protected $fillable = [
-        'position', 'contact_person', 'phone_number_1',
-        'primary_email', 
+        'address_line1', 'city', 'province',
+        'postal_code', 'citizenship', 
+        'date_of_birth', 
     ];
 	
 	protected $casts = [

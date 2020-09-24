@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PersonaDetailsController;
 use App\Http\Controllers\ContactInfoController;
+use App\Http\Controllers\AddressController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,3 +16,5 @@ use App\Http\Controllers\ContactInfoController;
 */
 Route::get('/getPersonalDetails',[PersonaDetailsController::class, 'index']);
 Route::get('/getContactInfo',[ContactInfoController::class, 'index']);
+Route::get('/getAddress',[AddressController::class, 'index']);
+Route::get('/getPersonsAddress',[AddressController::class, 'join']);
