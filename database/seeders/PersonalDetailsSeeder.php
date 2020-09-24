@@ -18,8 +18,8 @@ class PersonalDetailsSeeder extends Seeder
     {
 		
 		
-        // And now, let's create a few personal details in our database:
-        DB::table('personalDetails')->insert([
+        // And now, let's create a few dummy personal details in our database:
+        DB::table('personaldetails')->insert([
             'initials' => 's.z.k.l',
             'surname' => 'mzulwini',
             'first_name' => 'sakhile',
@@ -34,11 +34,12 @@ class PersonalDetailsSeeder extends Seeder
             'other_language' => 'english',
             'drivers_license' => 'code 10',
             'own_transport' => 'yes',
+			//'contactinfos_id' => '1',
             'created_at' => Carbon::now()->format('d-m-Y H:i:s'),
             'updated_at' => Carbon::now()->format('d-m-Y H:i:s')
         ]);
 		
-		DB::table('personalDetails')->insert([
+		DB::table('personaldetails')->insert([
             'initials' => 'k',
             'surname' => 'khanyile',
             'first_name' => 'khanyisani',
@@ -53,11 +54,12 @@ class PersonalDetailsSeeder extends Seeder
             'other_language' => 'english,zulu',
             'drivers_license' => 'code 10',
             'own_transport' => 'no',
+			//'contactinfos_id' => '2',
             'created_at' => Carbon::now()->format('d-m-Y H:i:s'),
             'updated_at' => Carbon::now()->format('d-m-Y H:i:s')
         ]);
 		
-		DB::table('personalDetails')->insert([
+		DB::table('personaldetails')->insert([
             'initials' => 's.l',
             'surname' => 'ericson',
             'first_name' => 'stephen',
@@ -72,6 +74,7 @@ class PersonalDetailsSeeder extends Seeder
             'other_language' => 'english',
             'drivers_license' => '',
             'own_transport' => 'no',
+			//'contactinfos_id' => '3',
             'created_at' => Carbon::now()->format('d-m-Y H:i:s'),
             'updated_at' => Carbon::now()->format('d-m-Y H:i:s')
         ]);

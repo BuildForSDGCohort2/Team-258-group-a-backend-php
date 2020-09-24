@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PersonaDetailsController;
+use App\Http\Controllers\ContactInfoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,5 +13,5 @@ use App\Http\Controllers\PersonaDetailsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('getRecords',[PersonaDetailsController::class, 'index']);
+Route::get('/getPersonalDetails',[PersonaDetailsController::class, 'index']);
+Route::get('/getContactInfo',[ContactInfoController::class, 'index']);

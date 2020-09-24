@@ -7,10 +7,10 @@ use DB;
 
 class PersonaDetailsController extends Controller
 {
-    //raw select query
+    //select query
 	public function index()
     {
-        $details = DB::table('personalDetails')->get();
+        $details = DB::table('personaldetails')->get();
         return $details.'/n';
 		
     }

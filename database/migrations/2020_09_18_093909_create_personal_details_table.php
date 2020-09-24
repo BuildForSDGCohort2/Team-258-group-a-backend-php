@@ -13,7 +13,8 @@ class CreatePersonalDetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('personalDetails', function (Blueprint $table) {
+		
+        Schema::create('personaldetails', function (Blueprint $table) {
             $table->id();
             $table->string('initials');
             $table->string('surname');
@@ -30,6 +31,7 @@ class CreatePersonalDetailsTable extends Migration
             $table->string('other_language');
             $table->string('drivers_license')->nullable();
             $table->string('own_transport');
+           // $table->foreignId('contactinfos_id')->nullable()->constrained();
             $table->timestamps();
         });
     }
@@ -41,6 +43,7 @@ class CreatePersonalDetailsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('personalDetails');
+        Schema::dropIfExists('personaldetails');
+        //Schema::dropIfExists('contactinfos');
     }
 }
