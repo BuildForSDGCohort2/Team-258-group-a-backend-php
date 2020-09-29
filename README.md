@@ -9,9 +9,9 @@ about the project here [Fumana](https://github.com/BuildForSDGCohort2/Team-258-g
 ## Requirements
 
 -	PHP 7.2.0 or greater
--	Laravel 7
+-	Laravel 8
 -	Composer
--   MySQL 
+-   sqlite
 -	Text editor and command line, i use vscode since it combines both
 
 ## Installation
@@ -22,8 +22,10 @@ This is done on the command line or terminal.
 *   Clone the app on your computer 
 *  `cd` into the directory of where you installed this project.
 *	Run  `composer install`
-*	Run  `cp .env.example .env` to create your .env file
-*	In the .env file fill in the DB_HOST , DB_PORT , DB_DATABASE , DB_USERNAME , and DB_PASSWORD  options need to match the credentials of the database you just created.
+*	Run  `cp .env.example .env` if you have a .env file duplicate it and change the name to .env
+*	In the .env file remove DB_HOST , DB_PORT , DB_DATABASE , DB_USERNAME , and DB_PASSWORD, only leave DB_CONNECTION=, change DB_CONNECTION=mysql to DB_CONNECTION=sqlite.
+*	Whilst in the .env file add, `DB_DATABASE=database\database.sqlite` and `DB_FOREIGN_KEYS=true`  each on a new line 
+*   In the database folder, create a file – database.sqlite (this is database file with extension .sqlite).
 *	Run `php artisan migrate`    to migrate / create the database.
 *   [Optional] run     `php artisan db:seed`  if your repo contains a seeder file, to fill your database with dummy data
 *   Run `php artisan serve`, the app should run on port 8000
