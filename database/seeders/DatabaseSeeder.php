@@ -19,7 +19,10 @@ class DatabaseSeeder extends Seeder
 		$this->call([
         //PersonalDetailsSeeder::class,
         //ContactInfoSeeder::class,
-        AddressSeeder::class,
+        //AddressSeeder::class,
+        //SocialSeeder::class,
+        //QualificationSeeder::class,
+        //SkillSeeder::class,
     ]);
     }
 }

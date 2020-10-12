@@ -1,61 +1,41 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Team-258-group-a-backend-php
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c958f7ef8c71434f9b3a65779203edcd)](https://app.codacy.com/gh/BuildForSDGCohort2/Team-258-group-a-backend-php?utm_source=github.com&utm_medium=referral&utm_content=BuildForSDGCohort2/Team-258-group-a-backend-php&utm_campaign=Badge_Grade_Dashboard)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## Introduction
 
-## About Laravel
+This is the PHP back end of the fumana work project. This is where the magic happens; you can learn more 
+about the project here [Fumana](https://github.com/BuildForSDGCohort2/Team-258-group-a-frontend).
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Requirements
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-	PHP 7.2.0 or greater
+-	Laravel 8
+-	Composer
+-   sqlite
+-	Text editor and command line, i use vscode since it combines both
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Installation
 
-## Learning Laravel
+This is done on the command line or terminal. 
+[Optional] For the full installation go here for [laravel](https://laravel.com/docs/7.x/installation)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+*   Clone the app on your computer 
+*  `cd` into the directory of where you installed this project.
+*	Run  `composer install`
+*	Run  `cp .env.example .env` if you have a .env file duplicate it and change the name to .env
+*	In the .env file remove DB_HOST , DB_PORT , DB_DATABASE , DB_USERNAME , and DB_PASSWORD, only leave DB_CONNECTION=, change DB_CONNECTION=mysql to DB_CONNECTION=sqlite.
+*	Whilst in the .env file add, `DB_DATABASE=absolute\path\to\database\database.sqlite` and `DB_FOREIGN_KEYS=true`  each on a new line 
+*   In the database folder, create a file – database.sqlite (this is database file with extension .sqlite).
+*	Run `php artisan migrate`    to migrate / create the database if the foreign key give a problem you can  create each table on its on by running `php artisan migrate --path=\database\migrations\2014_10_12_000000_create_tablename_table.php`
+*   [Optional]go \database\seeders\DatabaseSeeder.php and uncommment the seeder class you want to run and run     `php artisan db:seed`  if your repo contains a seeder file, to fill your database with dummy data. 
+*   Run `php artisan serve`, the app should run on port 8000
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Todo
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- [ ] Create database schema
+- [ ] Populate database
+- [ ] Ceate Insert/Add user
+- [ ] Ceate Edit user
+- [ ] Ceate Update user
+- [ ] Ceate Delete user
+- [ ] Ceate Read user

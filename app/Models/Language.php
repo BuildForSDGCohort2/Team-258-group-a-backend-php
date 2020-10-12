@@ -5,16 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ContactInfo extends Model
+class Language extends Model
 {
     use HasFactory;
 	
 	protected $fillable = [
-        'position', 'contact_person', 'phone_number_1',
-        'primary_email', 
+        'home_language', 'other_language', 'personaldetails_id', 
     ];
 	
 	protected $casts = [
+	'home_language' => 'array',
+    'other_language' => 'array',
     'created_at' => 'datetime:d-m-Y',
     'updated_at' => 'datetime:d-m-Y',
 ];
