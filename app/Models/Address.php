@@ -10,14 +10,15 @@ class Address extends Model
     use HasFactory;
 	
 	protected $fillable = [
-        'address_line1', 'city', 'province',
-        'postal_code', 'citizenship', 
-        'date_of_birth', 
+        'address_line1', 'address_line2', 'city', 'province',
+        'postal_code', 'personaldetails_id'
+        
     ];
 	
 	protected $casts = [
-    'created_at' => 'datetime:d-m-Y',
-    'updated_at' => 'datetime:d-m-Y',
-    'date_of_birth' => 'datetime:d-m-Y',
-];
+       'created_at' => 'datetime:d-m-Y H:i:s',
+       'updated_at' => 'datetime:d-m-Y H:i:s',
+    ];
+	
+
 }

@@ -14,9 +14,14 @@ class Language extends Model
     ];
 	
 	protected $casts = [
-	'home_language' => 'array',
-    'other_language' => 'array',
-    'created_at' => 'datetime:d-m-Y',
-    'updated_at' => 'datetime:d-m-Y',
-];
+	   'home_language' => 'array',
+       'other_language' => 'array',
+       'created_at' => 'datetime:d-m-Y H:i:s',
+       'updated_at' => 'datetime:d-m-Y H:i:s',
+    ];
+	
+	public function jobseeker()
+    {
+        return $this->belongsTo('App\Models\Jobseeker');
+    }
 }

@@ -27,11 +27,9 @@ class CreatePersonalDetailsTable extends Migration
             $table->date('date_of_birth'); //format it
             $table->string('gender');
             $table->string('marital_status');
-            $table->string('home_language');
-            $table->string('other_language');
             $table->string('drivers_license')->nullable();
             $table->string('own_transport');
-           // $table->foreignId('contactinfos_id')->nullable()->constrained();
+            $table->string('password');
             $table->timestamps();
         });
     }
@@ -44,6 +42,5 @@ class CreatePersonalDetailsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('personaldetails');
-        //Schema::dropIfExists('contactinfos');
     }
 }

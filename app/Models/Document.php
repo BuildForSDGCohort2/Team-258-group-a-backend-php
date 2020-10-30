@@ -15,10 +15,15 @@ class Document extends Model
     ];
 	
 	protected $casts = [
-	'profile_picture' => 'array',
-    'identity_document' => 'array',
-    'qualification' => 'array',
-    'created_at' => 'datetime:d-m-Y',
-    'updated_at' => 'datetime:d-m-Y',
-];
+	   'profile_picture' => 'array',
+       'identity_document' => 'array',
+       'qualification' => 'array',
+       'created_at' => 'datetime:d-m-Y H:i:s',
+       'updated_at' => 'datetime:d-m-Y H:i:s',
+    ];
+	
+	public function jobseeker()
+    {
+        return $this->belongsTo('App\Models\Jobseeker');
+    }
 }

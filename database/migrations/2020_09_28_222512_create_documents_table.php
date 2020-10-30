@@ -18,8 +18,9 @@ class CreateDocumentsTable extends Migration
             $table->json('profile_picture')->nullable();
             $table->json('identity_document')->nullable();
             $table->json('qualification')->nullable();
-			$table->string('personaldetails_id')->constrained();
-			
+			$table->foreignId('personaldetails_id')
+            ->constrained()
+            ->onDelete('cascade');
             $table->timestamps();
         });
     }

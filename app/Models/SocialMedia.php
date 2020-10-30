@@ -9,14 +9,20 @@ class SocialMedia extends Model
 {
     use HasFactory;
 	
+	protected $table = 'socialmedia';
+	
 	protected $fillable = [
-        'name',
-        'file_path',
+        'websiteurl', 'facebookurl', 'twitterurl',
+        'instagramurl', 'linkedinurl',
     ];
 	
 	protected $casts = [
-    'created_at' => 'datetime:d-m-Y',
-    'updated_at' => 'datetime:d-m-Y',
-    'date_of_birth' => 'datetime:d-m-Y',
-];
+       'created_at' => 'datetime:d-m-Y H:i:s',
+       'updated_at' => 'datetime:d-m-Y H:i:s',
+    ];
+	
+	public function jobseeker()
+    {
+        return $this->belongsTo('App\Models\Jobseeker');
+    }
 }

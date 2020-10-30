@@ -18,7 +18,9 @@ class CreateQualificationsTable extends Migration
             $table->string('institution_attended')->nullable();
             $table->string('qualification_name')->nullable();
             $table->string('NQFlevel')->nullable();
-			$table->string('personaldetails_id')->constrained();
+			$table->foreignId('personaldetails_id')
+            ->constrained()
+            ->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -16,8 +16,15 @@ class Skill extends Model
     ];
 	
 	protected $casts = [
-	'skill_array' => 'array',
-    'created_at' => 'datetime:d-m-Y',
-    'updated_at' => 'datetime:d-m-Y',
-];
+	   'skill_array' => 'array',
+       'created_at' => 'datetime:d-m-Y H:i:s',
+       'updated_at' => 'datetime:d-m-Y H:i:s',
+    ];
+	
+	
+	
+	public function jobseeker()
+    {
+        return $this->belongsTo('App\Models\Jobseeker');
+    }
 }

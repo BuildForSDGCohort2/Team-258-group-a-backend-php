@@ -17,7 +17,9 @@ class CreateLanguagesTable extends Migration
             $table->id();
             $table->json('home_language');
             $table->json('other_language');
-			$table->string('personaldetails_id')->constrained();
+			$table->foreignId('personaldetails_id')
+            ->constrained()
+            ->onDelete('cascade');
             $table->timestamps();
         });
     }

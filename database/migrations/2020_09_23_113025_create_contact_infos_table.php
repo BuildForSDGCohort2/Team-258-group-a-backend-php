@@ -13,6 +13,7 @@ class CreateContactInfosTable extends Migration
      */
     public function up()
     {
+		
         Schema::create('contactinfos', function (Blueprint $table) {
             $table->id();
             $table->string('position');
@@ -21,7 +22,9 @@ class CreateContactInfosTable extends Migration
             $table->string('phone_number_2')->nullable();
             $table->string('primary_email');
             $table->string('secondary_email')->nullable();
-			$table->foreignId('personaldetails_id')->constrained();
+			$table->foreignId('personaldetails_id')
+            ->constrained()
+            ->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -34,6 +37,6 @@ class CreateContactInfosTable extends Migration
     public function down()
     {
         Schema::dropIfExists('contactinfos');
-        //Schema::dropIfExists('personaldetails');
+		
     }
 }

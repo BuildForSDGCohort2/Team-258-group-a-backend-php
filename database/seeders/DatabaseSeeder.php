@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
         //AddressSeeder::class,
         //SocialSeeder::class,
         //QualificationSeeder::class,
-        //SkillSeeder::class,
+        //JobseekerSeeder::class,
     ]);
     }
 }

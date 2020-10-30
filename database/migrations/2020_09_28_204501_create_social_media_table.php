@@ -13,15 +13,18 @@ class CreateSocialMediaTable extends Migration
      */
     public function up()
     {
+		
+		
         Schema::create('socialmedia', function (Blueprint $table) {
             $table->id();
-            $table->string('websiteurl');
-            $table->string('facebookurl');
-            $table->string('twitterurl');
-            $table->string('instagramurl');
-            $table->string('linkedinurl');
-			$table->string('personaldetails_id')->nullable()->constrained();
-			$table->string('employers_id')->nullable()->constrained();
+            $table->string('websiteurl')->nullable();
+            $table->string('facebookurl')->nullable();
+            $table->string('twitterurl')->nullable();
+            $table->string('instagramurl')->nullable();
+            $table->string('linkedinurl')->nullable();
+			$table->foreignId('personaldetails_id')
+            ->constrained()
+            ->onDelete('cascade');
             $table->timestamps();
         });
     }

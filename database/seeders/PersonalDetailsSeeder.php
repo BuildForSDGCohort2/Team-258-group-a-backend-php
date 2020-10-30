@@ -30,11 +30,9 @@ class PersonalDetailsSeeder extends Seeder
             'date_of_birth' => '1932/05/14',
             'gender' => 'male',
             'marital_status' => 'single',
-            'home_language' => 'zulu',
-            'other_language' => 'english',
             'drivers_license' => 'code 10',
             'own_transport' => 'yes',
-			//'contactinfos_id' => '1',
+            'password' => 'Password1',
             'created_at' => Carbon::now()->format('d-m-Y H:i:s'),
             'updated_at' => Carbon::now()->format('d-m-Y H:i:s')
         ]);
@@ -50,11 +48,9 @@ class PersonalDetailsSeeder extends Seeder
             'date_of_birth' => '1994/08/01',
             'gender' => 'male',
             'marital_status' => 'married',
-            'home_language' => 'xhosa',
-            'other_language' => 'english,zulu',
             'drivers_license' => 'code 10',
             'own_transport' => 'no',
-			//'contactinfos_id' => '2',
+            'password' => 'Password3',
             'created_at' => Carbon::now()->format('d-m-Y H:i:s'),
             'updated_at' => Carbon::now()->format('d-m-Y H:i:s')
         ]);
@@ -70,11 +66,9 @@ class PersonalDetailsSeeder extends Seeder
             'date_of_birth' => '1965/05/22',
             'gender' => 'male',
             'marital_status' => 'single',
-            'home_language' => 'french',
-            'other_language' => 'english',
             'drivers_license' => '',
             'own_transport' => 'no',
-			//'contactinfos_id' => '3',
+            'password' => 'Password2',
             'created_at' => Carbon::now()->format('d-m-Y H:i:s'),
             'updated_at' => Carbon::now()->format('d-m-Y H:i:s')
         ]);
